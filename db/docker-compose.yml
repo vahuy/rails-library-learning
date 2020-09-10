@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  rails-database:
+    image: postgres:9.6
+    restart: always
+    container_name: rails-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=rails-postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
